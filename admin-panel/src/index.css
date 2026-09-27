@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Hide scrollbars globally to give a clean native app experience */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}

@@ -1,0 +1,6 @@
+{
+  "name": "FoodSave",
+  "description": "Complete premium mobile-first Admin application for FoodSave—the professional platform connecting Donors, Volunteers, and NGOs to rescue food and share hope.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

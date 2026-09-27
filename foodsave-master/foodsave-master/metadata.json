@@ -1,0 +1,6 @@
+{
+  "name": "FoodSave",
+  "description": "An interactive food rescue donor portal connecting restaurants with volunteer couriers and local shelters to build zero-waste food communities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
