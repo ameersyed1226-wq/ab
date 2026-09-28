@@ -965,7 +965,7 @@ export const AdminPanel: React.FC = () => {
                   <span className="text-xs font-mono text-slate-300">●●●● ●●●● {selectedVolunteer.aadhaarNo.slice(-4)}</span>
                 </div>
                 <div className="flex flex-col gap-0.5">
-                  <span className="text-[9px] font-bold text-slate-500 uppercase">Volunteer ID</span>
+                  <span className="text-[9px] font-bold text-slate-500 uppercase">NGO ID</span>
                   <span className="text-xs font-mono text-blue-400">{selectedVolunteer.volunteerId}</span>
                 </div>
                 <div className="flex flex-col gap-0.5">

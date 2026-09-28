@@ -165,19 +165,8 @@ export const VolunteerDonorDetailsModal: React.FC<VolunteerDonorDetailsModalProp
             </div>
           )}
 
-          {/* Handoff PIN */}
-          <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#16A34A] text-white flex items-center justify-center font-bold text-sm">
-                🔐
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider">Handoff PIN</span>
-                <span className="text-lg font-mono font-black tracking-[0.25em] text-slate-800">{donation.pin}</span>
-              </div>
-            </div>
-            <span className="text-[10px] font-bold text-slate-400">Ask donor for PIN</span>
-          </div>
+
+
 
           {/* Action CTA when in waiting_pickup state */}
           {donation.status === 'waiting_pickup' && onAccept && (

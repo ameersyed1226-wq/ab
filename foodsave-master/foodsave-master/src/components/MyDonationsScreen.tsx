@@ -360,10 +360,8 @@ export const MyDonationsScreen: React.FC = () => {
                         <span>Temperature:</span>
                         <span className="text-[#006b2c] font-bold">Insulated Steaming Pan (&gt; 63°C)</span>
                       </div>
-                      <div className="flex items-center justify-between text-slate-500">
-                        <span>Handoff PIN:</span>
-                        <span className="text-slate-800 font-mono font-bold tracking-wider">{donation.pin}</span>
-                      </div>
+
+
                       {donation.courier ? (
                         <>
                           <div className="flex items-center justify-between text-slate-500">

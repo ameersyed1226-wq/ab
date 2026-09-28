@@ -261,11 +261,8 @@ export const HomeScreen: React.FC = () => {
                     : '🤝 Volunteer Assigned'}
                 </span>
               </div>
-              
-              {/* PIN code indicator */}
-              <div className="h-8 px-3 rounded-lg bg-emerald-50/50 text-[#006b2c] font-mono font-bold text-xs flex items-center gap-1">
-                <span>PIN: {activeDonation.pin}</span>
-              </div>
+
+
             </div>
           </div>
         ) : (

@@ -112,7 +112,7 @@ export const DonationDetailsScreen: React.FC<DonationDetailsScreenProps> = ({ id
             <div className="flex flex-col">
               <span className="text-xs font-black uppercase tracking-wider">Volunteer Arrived at Kitchen!</span>
               <span className="text-[11px] text-emerald-100 font-medium">
-                {donation.courier?.name || 'Ameer Syed'} is outside. Provide Handoff PIN: <strong>{donation.pin}</strong>
+                {donation.courier?.name || 'Ameer Syed'} is outside. Please proceed to hand over the food.
               </span>
             </div>
           </div>
@@ -562,7 +562,7 @@ export const DonationDetailsScreen: React.FC<DonationDetailsScreenProps> = ({ id
               <span className="text-[10px] text-slate-400">
                 {donation.status === 'food_collected'
                   ? 'Custody verified! Food safely secured in courier vehicle.'
-                  : 'Verify security PIN at dispatch desk for custody handover.'}
+                  : 'Verify at dispatch desk for custody handover.'}
               </span>
             </div>
           </div>
@@ -584,25 +584,7 @@ export const DonationDetailsScreen: React.FC<DonationDetailsScreenProps> = ({ id
         </div>
       </div>
 
-      {/* Verification PIN Modal Dialog Trigger */}
-      <div className="mt-4 bg-emerald-50/40 border border-emerald-100 rounded-2xl p-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-[#006b2c] text-white flex items-center justify-center font-bold">
-            ***
-          </div>
-          <div className="flex flex-col">
-            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Handoff Verification</span>
-            <span className="text-sm font-mono font-bold tracking-widest text-slate-800">PIN: {donation.pin}</span>
-          </div>
-        </div>
-        <button
-          className="px-4 py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 text-xs font-bold active:scale-95 transition-all cursor-pointer shadow-xs"
-          onClick={handleCopyPin}
-          type="button"
-        >
-          {copied ? 'Copied!' : 'Copy'}
-        </button>
-      </div>
+
 
       {/* MOCK MAP MODAL OVERLAY */}
       {showMapModal && (

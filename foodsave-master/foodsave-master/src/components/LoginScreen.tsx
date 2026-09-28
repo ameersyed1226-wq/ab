@@ -168,16 +168,18 @@ export const LoginScreen: React.FC = () => {
         
         {/* LOGO & HEADING */}
         <div className="flex flex-col items-center text-center">
-          <div className="w-14 h-14 rounded-2xl bg-[#006b2c] flex items-center justify-center text-white shadow-lg shadow-emerald-900/20 mb-3 ring-4 ring-emerald-500/20">
-            <span className="text-2xl">🌱</span>
+          <div className="p-2 bg-white rounded-2xl border border-emerald-100 shadow-xs mb-3">
+            <img
+              alt="FoodSave Logo"
+              className="w-16 h-16 object-contain"
+              src="https://ik.imagekit.io/72dmudtmj/WhatsApp%20Image%202026-09-19%20at%2010.23.50%20PM.jpeg"
+              referrerPolicy="no-referrer"
+            />
           </div>
           <span className="text-[10px] font-black tracking-widest text-[#006b2c] uppercase bg-emerald-100/70 px-2.5 py-0.5 rounded-full border border-emerald-200">
             Food Sharing Alliance
           </span>
-          <h1 className="text-2xl font-black tracking-tight text-slate-900 mt-2">
-            FoodSave Community
-          </h1>
-          <p className="text-xs text-slate-500 max-w-[300px] mt-1 font-medium">
+          <p className="text-xs text-slate-500 max-w-[300px] mt-2 font-medium">
             Bridging surplus food from commercial kitchens to verified community volunteers.
           </p>
         </div>

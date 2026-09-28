@@ -631,7 +631,7 @@ export const ProfileScreen: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div className="flex flex-col">
                   <span className="text-xs font-bold text-slate-800">SMS Verification Codes</span>
-                  <span className="text-[10px] text-slate-500">Sends handoff PIN verification to dispatch chef</span>
+                  <span className="text-[10px] text-slate-500">Sends verification codes to dispatch chef</span>
                 </div>
                 <button
                   type="button"

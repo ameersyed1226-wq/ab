@@ -129,7 +129,7 @@ export const RegistrationScreen: React.FC<RegistrationScreenProps> = ({ onRegist
   const validateStep2 = (): boolean => {
     if (!aadhaarNo.trim() || aadhaarNo.length < 12) { setError('Please enter a valid 12-digit Aadhaar number'); return false; }
     if (role === 'owner' && !fssaiLicense.trim()) { setError('Please enter your FSSAI License number'); return false; }
-    if (role === 'volunteer' && !volunteerId.trim()) { setError('Please enter your Volunteer ID'); return false; }
+    if (role === 'volunteer' && !volunteerId.trim()) { setError('Please enter your NGO ID'); return false; }
     if (!address.trim()) { setError('Please enter your address'); return false; }
     return true;
   };
@@ -556,7 +556,7 @@ export const RegistrationScreen: React.FC<RegistrationScreenProps> = ({ onRegist
               ) : (
                 <div className="flex flex-col gap-1">
                   <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-1">
-                    Volunteer ID *
+                    NGO ID *
                   </label>
                   <div className="bg-slate-50 border border-slate-200/60 rounded-xl px-3 py-2.5 flex items-center gap-2 focus-within:ring-2 focus-within:ring-emerald-600/20">
                     <FileText size={14} className="text-blue-600 shrink-0" />
@@ -564,12 +564,12 @@ export const RegistrationScreen: React.FC<RegistrationScreenProps> = ({ onRegist
                       type="text"
                       required
                       className="bg-transparent w-full text-xs text-slate-800 focus:outline-none placeholder-slate-300 font-mono font-bold"
-                      placeholder="VOL-XXXXXXX"
+                      placeholder="NGO-XXXXXXX"
                       value={volunteerId}
                       onChange={(e) => setVolunteerId(e.target.value)}
                     />
                   </div>
-                  <span className="text-[9px] text-slate-400 px-1">FoodSave Volunteer Identity Card Number</span>
+                  <span className="text-[9px] text-slate-400 px-1">FoodSave NGO Identity Card Number</span>
                 </div>
               )}
 
@@ -598,7 +598,7 @@ export const RegistrationScreen: React.FC<RegistrationScreenProps> = ({ onRegist
                   <span className="text-[10px] text-amber-700 leading-relaxed">
                     {role === 'owner' 
                       ? 'FSSAI License certificate, Business registration, GSTIN (optional)'
-                      : 'Valid Volunteer ID card, Government photo ID proof'
+                      : 'Valid NGO ID card, Government photo ID proof'
                     }
                   </span>
                 </div>
@@ -634,7 +634,7 @@ export const RegistrationScreen: React.FC<RegistrationScreenProps> = ({ onRegist
                   </div>
                   <div className="flex flex-col gap-0.5 col-span-2">
                     <span className="text-[9px] text-slate-400 font-bold uppercase">
-                      {role === 'owner' ? 'FSSAI License' : 'Volunteer ID'}
+                      {role === 'owner' ? 'FSSAI License' : 'NGO ID'}
                     </span>
                     <span className="text-xs font-mono font-bold text-slate-800">
                       {role === 'owner' ? fssaiLicense : volunteerId}
