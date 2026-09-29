@@ -12,12 +12,19 @@ import { LoginScreen } from './components/LoginScreen';
 import { VolunteerHomeScreen } from './components/VolunteerHomeScreen';
 import { VolunteerMapScreen } from './components/VolunteerMapScreen';
 import { VolunteerPickupsScreen } from './components/VolunteerPickupsScreen';
+// Admin panel - full-width desktop dashboard
+import { AdminPanel } from './components/AdminPanel';
 
 const MainAppContent: React.FC = () => {
   const { activeTab, isLoggedIn, userRole } = useApp();
 
   if (!isLoggedIn) {
     return <LoginScreen />;
+  }
+
+  // Admin role renders the full-width desktop AdminPanel (no mobile wrapper)
+  if (userRole === 'admin') {
+    return <AdminPanel />;
   }
 
   const renderScreen = () => {

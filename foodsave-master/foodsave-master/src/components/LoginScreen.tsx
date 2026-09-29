@@ -460,8 +460,8 @@ export const LoginScreen: React.FC = () => {
               <Shield size={16} />
             </div>
             <div className="flex flex-col">
-              <span className="text-xs font-bold text-slate-100">Looking for Admin Panel?</span>
-              <span className="text-[10px] text-slate-400">Independent admin dashboard in ab/admin-panel</span>
+              <span className="text-xs font-bold text-slate-100">Looking for RePlate Admin?</span>
+              <span className="text-[10px] text-slate-400">Independent admin dashboard on Port 3000</span>
             </div>
           </div>
           <a

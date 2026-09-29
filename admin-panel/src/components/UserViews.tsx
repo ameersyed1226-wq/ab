@@ -229,13 +229,13 @@ export function UserViews({ users, onUpdateUserStatus, onVerifyUser }: UserViews
       </div>
 
       {/* Grid of Users Cards */}
-      <div className="px-4 space-y-2 max-h-[460px] overflow-y-auto pb-4">
+      <div className="px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 pb-8">
         {finalFilteredUsers.length > 0 ? (
           finalFilteredUsers.map((user) => (
             <div
               key={user.id}
               onClick={() => setSelectedUser(user)}
-              className="bg-white rounded-2xl p-3 border border-gray-100 shadow-xs flex items-center justify-between hover:border-[#16A34A]/50 active:bg-[#F8FAF9] cursor-pointer transition-all"
+              className="bg-white rounded-2xl p-3.5 border border-gray-100 shadow-xs flex items-center justify-between hover:border-[#16A34A]/50 active:bg-[#F8FAF9] cursor-pointer transition-all hover:shadow-sm"
             >
               <div className="flex items-center space-x-3 min-w-0">
                 <div className="w-10 h-10 rounded-xl bg-[#F0F2F1] text-base flex items-center justify-center shrink-0 border border-gray-50 shadow-inner">
@@ -243,7 +243,7 @@ export function UserViews({ users, onUpdateUserStatus, onVerifyUser }: UserViews
                 </div>
                 <div className="min-w-0">
                   <div className="flex items-center space-x-1.5">
-                    <h4 className="text-xs font-bold text-[#17201A] truncate max-w-[120px]">{user.name}</h4>
+                    <h4 className="text-xs font-bold text-[#17201A] truncate max-w-[150px] md:max-w-[180px]">{user.name}</h4>
                     {getStatusBadge(user.status)}
                   </div>
                   <div className="flex items-center space-x-1.5 mt-1 text-[10px] text-[#6B7280]">
@@ -270,7 +270,7 @@ export function UserViews({ users, onUpdateUserStatus, onVerifyUser }: UserViews
             <span className="text-3xl">👥</span>
             <h4 className="text-xs font-bold text-[#17201A] mt-2">No users matching search</h4>
             <p className="text-[10px] text-[#6B7280] mt-1 max-w-[200px] mx-auto leading-relaxed">
-              We couldn't find any FoodSave platform accounts with those constraints.
+              We couldn't find any RePlate platform accounts with those constraints.
             </p>
             <button
               onClick={handleClearFilters}

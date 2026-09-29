@@ -138,16 +138,16 @@ export function ReportViews({ reports, onUpdateReportStatus, onExportComplete }:
 
       {/* SECTION 1: ANALYTICS DASHBOARD */}
       {activeSection === 'analytics' ? (
-        <div className="space-y-4 max-h-[500px] overflow-y-auto px-4 pb-12">
+        <div className="space-y-5 px-4 pb-12">
           
           {/* Quick Date filter button */}
-          <div className="flex justify-between items-center bg-white p-2.5 rounded-2xl border border-gray-100">
-            <span className="text-[10px] font-bold text-gray-500 uppercase">Reporting Scope</span>
+          <div className="flex justify-between items-center bg-white p-3 rounded-2xl border border-gray-100">
+            <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Reporting Scope</span>
             <div className="relative">
               <select
                 value={dateFilter}
                 onChange={(e) => setDateFilter(e.target.value as any)}
-                className="bg-gray-100 hover:bg-gray-200 text-[#17201A] text-[10.5px] font-bold py-1 px-2.5 rounded-lg border-none focus:ring-1 focus:ring-[#16A34A] cursor-pointer"
+                className="bg-gray-100 hover:bg-gray-200 text-[#17201A] text-xs font-bold py-1.5 px-3 rounded-lg border-none focus:ring-1 focus:ring-[#16A34A] cursor-pointer"
               >
                 <option value="Today">Today</option>
                 <option value="7 Days">Last 7 Days</option>
@@ -158,49 +158,49 @@ export function ReportViews({ reports, onUpdateReportStatus, onExportComplete }:
           </div>
 
           {/* Core Summary Cards Grid */}
-          <div className="grid grid-cols-2 gap-2">
-            <div className="bg-white rounded-2xl p-3 border border-gray-100 shadow-xs">
-              <span className="text-[#6B7280] text-[9.5px] font-medium block">Total Donations</span>
-              <span className="text-sm font-extrabold text-[#17201A] block mt-0.5">4,892</span>
-              <span className="text-[8px] text-[#16A34A] font-bold mt-1 block">↑ 8.2% vs last month</span>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-xs">
+              <span className="text-[#6B7280] text-[10px] font-medium block">Total Donations</span>
+              <span className="text-xl font-extrabold text-[#17201A] block mt-0.5">4,892</span>
+              <span className="text-[9px] text-[#16A34A] font-bold mt-1 block">↑ 8.2% vs last month</span>
             </div>
 
-            <div className="bg-[#DCFCE7] rounded-2xl p-3 border border-green-100">
-              <span className="text-[#166534] text-[9.5px] font-bold block">Meals Rescued</span>
-              <span className="text-sm font-black text-[#166534] block mt-0.5">58,420</span>
-              <span className="text-[8px] text-[#166534] font-semibold mt-1 block">Save Food. Share Hope.</span>
+            <div className="bg-[#DCFCE7] rounded-2xl p-4 border border-green-100">
+              <span className="text-[#166534] text-[10px] font-bold block">Meals Rescued</span>
+              <span className="text-xl font-black text-[#166534] block mt-0.5">58,420</span>
+              <span className="text-[9px] text-[#166534] font-semibold mt-1 block">Save Food. Share Hope.</span>
             </div>
 
-            <div className="bg-white rounded-2xl p-3 border border-gray-100 shadow-xs">
-              <span className="text-[#6B7280] text-[9.5px] font-medium block">Completed Pickups</span>
-              <span className="text-sm font-extrabold text-[#17201A] block mt-0.5">4,620</span>
-              <span className="text-[8px] text-green-600 font-bold mt-1 block">94.4% success rate</span>
+            <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-xs">
+              <span className="text-[#6B7280] text-[10px] font-medium block">Completed Pickups</span>
+              <span className="text-xl font-extrabold text-[#17201A] block mt-0.5">4,620</span>
+              <span className="text-[9px] text-green-600 font-bold mt-1 block">94.4% success rate</span>
             </div>
 
-            <div className="bg-white rounded-2xl p-3 border border-gray-100 shadow-xs">
-              <span className="text-[#6B7280] text-[9.5px] font-medium block">Expired Donations</span>
-              <span className="text-sm font-extrabold text-red-500 block mt-0.5">272</span>
-              <span className="text-[8px] text-red-500 font-bold mt-1 block">↓ 1.4% wastage drop</span>
+            <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-xs">
+              <span className="text-[#6B7280] text-[10px] font-medium block">Expired Donations</span>
+              <span className="text-xl font-extrabold text-red-500 block mt-0.5">272</span>
+              <span className="text-[9px] text-red-500 font-bold mt-1 block">↓ 1.4% wastage drop</span>
             </div>
           </div>
 
           {/* Highlighted Rescue Card */}
-          <div className="bg-gradient-to-r from-[#DCFCE7] to-[#F1FDF5] rounded-2xl p-3.5 border border-green-100 flex items-center space-x-3 shadow-xs">
-            <div className="w-10 h-10 bg-white rounded-xl text-lg flex items-center justify-center border border-green-100 shrink-0 shadow-xs">
+          <div className="bg-gradient-to-r from-[#DCFCE7] to-[#F1FDF5] rounded-2xl p-4 border border-green-100 flex items-center space-x-3.5 shadow-xs">
+            <div className="w-12 h-12 bg-white rounded-xl text-2xl flex items-center justify-center border border-green-100 shrink-0 shadow-xs">
               🍱
             </div>
             <div>
-              <span className="text-[9px] font-bold text-green-800 uppercase tracking-wider block">Eco Impact Milestone</span>
-              <h4 className="text-sm font-black text-[#166534]">58,420 Meals Saved</h4>
-              <p className="text-[9.5px] text-[#166534] opacity-90 font-medium">Successfully rescued from local commercial landfill waste.</p>
+              <span className="text-[10px] font-bold text-green-800 uppercase tracking-wider block">Eco Impact Milestone</span>
+              <h4 className="text-base font-black text-[#166534]">58,420 Meals Saved</h4>
+              <p className="text-xs text-[#166534] opacity-90 font-medium">Successfully rescued from local commercial landfill waste.</p>
             </div>
           </div>
 
-          {/* Custom Dynamic Activity Chart */}
-          <DonationActivityChart />
-
-          {/* Donut chart for type distribution */}
-          <FoodTypeDistributionChart />
+          {/* Custom Dynamic Activity Chart & Food Type Distribution */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <DonationActivityChart />
+            <FoodTypeDistributionChart />
+          </div>
 
           {/* Area horizontal bar chart */}
           <AreaAnalyticsChart />
@@ -234,16 +234,16 @@ export function ReportViews({ reports, onUpdateReportStatus, onExportComplete }:
             <button
               id="export-report-launcher"
               onClick={() => setIsExportModalOpen(true)}
-              className="w-full py-3 bg-[#16A34A] text-white text-xs font-bold rounded-2xl shadow-md hover:bg-[#166534] flex items-center justify-center space-x-1.5 transition-all"
+              className="w-full py-3.5 bg-[#16A34A] text-white text-xs font-bold rounded-2xl shadow-md hover:bg-[#166534] flex items-center justify-center space-x-2 transition-all cursor-pointer"
             >
               <FileDown className="w-4 h-4" />
-              <span>Export Platform Report</span>
+              <span>Export Consolidated Platform Report</span>
             </button>
           </div>
         </div>
       ) : (
         /* SECTION 2: COMPLAINTS & ISSUE REPORTS */
-        <div className="space-y-3 max-h-[500px] overflow-y-auto px-4 pb-12">
+        <div className="space-y-4 px-4 pb-12">
           
           {/* horizontal scroll tab selector for Issues */}
           <div className="flex space-x-1.5 border-b border-gray-100 pb-1 overflow-x-auto scrollbar-none">
@@ -253,7 +253,7 @@ export function ReportViews({ reports, onUpdateReportStatus, onExportComplete }:
                 <button
                   key={tab}
                   onClick={() => setComplaintTab(tab)}
-                  className={`pb-1 px-1 text-xs font-semibold relative transition-all min-w-max ${
+                  className={`pb-1 px-1.5 text-xs font-semibold relative transition-all min-w-max cursor-pointer ${
                     complaintTab === tab ? 'text-[#16A34A] font-bold' : 'text-[#6B7280]'
                   }`}
                 >
@@ -274,7 +274,7 @@ export function ReportViews({ reports, onUpdateReportStatus, onExportComplete }:
           </div>
 
           {/* List of complaints */}
-          <div className="space-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {filteredReports.length > 0 ? (
               filteredReports.map((report) => (
                 <div

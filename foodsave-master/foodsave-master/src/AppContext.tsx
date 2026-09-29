@@ -30,8 +30,8 @@ interface AppContextType {
   setRestaurantName: (val: string) => void;
   userEmail: string;
   setUserEmail: (val: string) => void;
-  userRole: 'owner' | 'volunteer';
-  setUserRole: (val: 'owner' | 'volunteer') => void;
+  userRole: 'owner' | 'volunteer' | 'admin';
+  setUserRole: (val: 'owner' | 'volunteer' | 'admin') => void;
   activeRescueId: string | null;
   setActiveRescueId: (id: string | null) => void;
   rescueStep: 'accepted' | 'on_the_way' | 'arrived' | 'collected' | 'delivering' | 'confirmed' | 'delivered' | null;
@@ -100,8 +100,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return localStorage.getItem('foodsave_user_email') || 'rescue@foodsave.org';
   });
 
-  const [userRole, setUserRole] = useState<'owner' | 'volunteer'>(() => {
-    return (localStorage.getItem('foodsave_user_role') as 'owner' | 'volunteer') || 'owner';
+  const [userRole, setUserRole] = useState<'owner' | 'volunteer' | 'admin'>(() => {
+    return (localStorage.getItem('foodsave_user_role') as 'owner' | 'volunteer' | 'admin') || 'owner';
   });
 
   const [activeRescueId, setActiveRescueId] = useState<string | null>(() => {

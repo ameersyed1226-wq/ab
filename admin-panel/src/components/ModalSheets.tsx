@@ -37,7 +37,7 @@ export function ConfirmationModal({
     <div className="fixed inset-0 bg-[#17201A]/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
       <div 
         id="confirmation-modal-container"
-        className="bg-white rounded-3xl w-full max-w-[340px] p-5 shadow-xl border border-gray-100 transform scale-100 transition-all"
+        className="bg-white rounded-3xl w-full max-w-md p-6 shadow-2xl border border-gray-100 transform scale-100 transition-all"
       >
         <div className="flex flex-col items-center text-center">
           <div className={`p-3 rounded-full ${scheme.bg} ${scheme.text} mb-3 border ${scheme.border}`}>
@@ -91,7 +91,7 @@ export function DocumentViewerModal({
 
   return (
     <div className="fixed inset-0 bg-[#17201A]/70 backdrop-blur-xs flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-3xl w-full max-w-[350px] p-5 shadow-2xl border border-gray-100 relative">
+      <div className="bg-white rounded-3xl w-full max-w-lg p-6 shadow-2xl border border-gray-100 relative">
         <button
           onClick={onClose}
           className="absolute right-4 top-4 p-1 rounded-full hover:bg-gray-100 text-[#6B7280] transition-colors"
@@ -460,7 +460,7 @@ export function ExportReportModal({
 
   return (
     <div className="fixed inset-0 bg-[#17201A]/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-3xl w-full max-w-[340px] p-5 shadow-2xl border border-gray-100">
+      <div className="bg-white rounded-3xl w-full max-w-md p-6 shadow-2xl border border-gray-100">
         <h3 className="text-sm font-bold text-[#17201A] mb-1">Export Platform Report</h3>
         <p className="text-[10px] text-[#6B7280] mb-4">Select format to export consolidated system parameters.</p>
 
@@ -540,14 +540,14 @@ export function BottomSheet({ isOpen, onClose, title, children }: BottomSheetPro
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-[#17201A]/60 backdrop-blur-xs flex items-end justify-center z-40 transition-opacity">
+    <div className="fixed inset-0 bg-[#17201A]/60 backdrop-blur-xs flex items-end md:items-center justify-center z-40 transition-opacity p-0 md:p-4">
       {/* Backdrop tap to close */}
       <div className="absolute inset-0" onClick={onClose} />
       
       {/* Container */}
-      <div className="bg-white w-full max-w-[390px] rounded-t-[24px] shadow-2xl border-t border-gray-100 z-50 flex flex-col max-h-[75vh] animate-slide-up relative">
-        {/* Native drag handle */}
-        <div className="w-full flex justify-center py-2 shrink-0 cursor-pointer" onClick={onClose}>
+      <div className="bg-white w-full max-w-full md:max-w-xl rounded-t-[28px] md:rounded-3xl shadow-2xl border border-gray-100 z-50 flex flex-col max-h-[85vh] animate-slide-up relative">
+        {/* Native drag handle (mobile only) */}
+        <div className="w-full flex md:hidden justify-center py-2 shrink-0 cursor-pointer" onClick={onClose}>
           <div className="w-12 h-1 bg-gray-200 rounded-full" />
         </div>
 

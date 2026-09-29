@@ -187,17 +187,17 @@ export function DonationViews({ donations, onUpdateDonationStatus }: DonationVie
       </div>
 
       {/* Main Donation Cards Feed */}
-      <div className="px-4 space-y-2.5 max-h-[460px] overflow-y-auto pb-4">
+      <div className="px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 pb-8">
         {finalFilteredDonations.length > 0 ? (
           finalFilteredDonations.map((d) => (
             <div
               key={d.id}
               onClick={() => setSelectedDonation(d)}
-              className="bg-white rounded-2xl p-3 border border-gray-100 shadow-xs flex flex-col hover:border-[#16A34A]/50 transition-all cursor-pointer active:bg-[#F8FAF9]"
+              className="bg-white rounded-2xl p-3.5 border border-gray-100 shadow-xs flex flex-col hover:border-[#16A34A]/50 transition-all cursor-pointer active:bg-[#F8FAF9] hover:shadow-sm"
             >
               <div className="flex justify-between items-start">
                 <div className="flex items-center space-x-2.5 min-w-0">
-                  <div className="w-9 h-9 rounded-xl bg-[#DCFCE7]/20 text-lg flex items-center justify-center border border-gray-50 shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-[#DCFCE7]/20 text-xl flex items-center justify-center border border-gray-50 shrink-0">
                     {d.foodImage}
                   </div>
                   <div className="min-w-0">
@@ -211,7 +211,7 @@ export function DonationViews({ donations, onUpdateDonationStatus }: DonationVie
               {/* Quick info grid */}
               <div className="grid grid-cols-2 gap-y-1.5 gap-x-2 border-t border-dashed border-gray-100 pt-2.5 mt-2.5 text-[10px] text-[#6B7280]">
                 <div className="flex items-center min-w-0">
-                  <span className="font-bold text-[#17201A] truncate max-w-[80px]">{d.donorName}</span>
+                  <span className="font-bold text-[#17201A] truncate max-w-[120px]">{d.donorName}</span>
                 </div>
                 <div className="flex items-center justify-end">
                   <MapPin className="w-2.5 h-2.5 mr-0.5 text-gray-400 shrink-0" />
@@ -300,7 +300,7 @@ export function DonationViews({ donations, onUpdateDonationStatus }: DonationVie
                 <span className="text-[#6B7280] block text-[9px] uppercase tracking-wider mb-1">Donor</span>
                 <span className="font-bold text-[#17201A] block truncate">{selectedDonation.donorName}</span>
                 <span className="text-green-600 font-semibold flex items-center mt-1">
-                  <ShieldCheck className="w-3 h-3 mr-0.5 text-green-500" /> FoodSave Verified
+                  <ShieldCheck className="w-3 h-3 mr-0.5 text-green-500" /> RePlate Verified
                 </span>
               </div>
 
